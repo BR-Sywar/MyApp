@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/acc"
+            android:title="@string/accueil" />
+
+        <item
+            android:id="@+id/nav_Actualites"
+            android:icon="@drawable/acc"
+            android:title="@string/Actualite" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_reservation"
+            android:icon="@drawable/ticket"
+            android:title="Mes Réservation" />
+
+        <item
+            android:id="@+id/nav_parametre"
+            android:icon="@drawable/pngguru"
+            android:title="Paramétres" />
+
+        <item
+            android:id="@+id/nav_apropos"
+            android:icon="@drawable/share"
+            android:title="A propos nous" />
+        <item
+            android:id="@+id/nav_deconnexion"
+            android:icon="@drawable/deconnexion"
+            android:title="déconnexion" />
+    </group>
+</menu>

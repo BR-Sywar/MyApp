@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcomew">
+
+
+    <Button
+        android:text="@string/continuer_en_tant_qu_invit"
+        android:textColor="#FFFFFF"
+        android:id="@+id/invite"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/layer_style_invite"
+        android:gravity="center" />
+
+    <Button
+        android:text="Inscrit vous !"
+        android:textColor="#FFFFFF"
+        android:id="@+id/inscrit"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="169dp"
+        android:background="@drawable/_inscrit"
+        android:gravity="center" />
+
+</RelativeLayout>

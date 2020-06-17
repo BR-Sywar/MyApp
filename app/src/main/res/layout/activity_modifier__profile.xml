@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.Modifier.Modifierprofile"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_registre"
+            android:layout_width="316dp"
+            android:layout_height="49dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/buttonstyle"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Enregistrer"
+            android:textColor="#000"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="469dp" />
+
+        <EditText
+            android:id="@+id/Tel"
+            android:layout_width="161dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="184dp"
+            android:layout_marginRight="184dp"
+            android:layout_marginBottom="123dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Numéro"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="333dp" />
+
+        <EditText
+            android:id="@+id/ville"
+            android:layout_width="161dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="123dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Ville"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="333dp" />
+
+        <EditText
+            android:id="@+id/remdp"
+            android:layout_width="161dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="175dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Recréé mot de passe"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="181dp"
+            tools:layout_editor_absoluteY="390dp" />
+
+        <EditText
+            android:id="@+id/mdp"
+            android:layout_width="161dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="185dp"
+            android:layout_marginRight="185dp"
+            android:layout_marginBottom="175dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Mot de passe"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="390dp" />
+
+        <EditText
+            android:id="@+id/prenom"
+            android:layout_width="161dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="324dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Prénom"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="183dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="326dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="274dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="326dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="226dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="E-mail"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <EditText
+            android:id="@+id/Nom"
+            android:layout_width="161dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="185dp"
+            android:layout_marginRight="185dp"
+            android:layout_marginBottom="324dp"
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <ImageView
+            android:id="@+id/pdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="195dp"
+            android:layout_marginRight="195dp"
+            android:layout_marginBottom="429dp"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="14dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="201dp"
+            android:layout_marginRight="201dp"
+            android:layout_marginBottom="433dp"
+            android:src="@drawable/ic_menu_camera"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="110dp" />
+    </RelativeLayout>
+</LinearLayout>

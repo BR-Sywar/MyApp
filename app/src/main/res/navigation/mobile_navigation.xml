@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ui.Accueil.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/activity_homedashbord">
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_Actualites"
+        android:name="com.example.ui.Accueil.ActualitesFragment"
+        android:label="@string/Actualite"
+        tools:layout="@layout/fragment_actualites">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_sante"
+        android:name="com.example.ui.Accueil.SanteFragment"
+        android:label="Services Sante"
+        tools:layout="@layout/activity_sante" />
+    <fragment
+        android:id="@+id/nav_post"
+        android:name="com.example.ui.Accueil.PosteFragment"
+        android:label="Services Poste"
+        tools:layout="@layout/activity_sante" />
+    <fragment
+        android:id="@+id/nav_public"
+        android:name="com.example.ui.Accueil.PublicFragment"
+        android:label="Services Publics"
+        tools:layout="@layout/activity_sante" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.ui.profile.ProfileFragment"
+        android:label="Votre Profile"
+        tools:layout="@layout/activity_bank" />
+
+    <fragment
+        android:id="@+id/nav_reservation"
+        android:name="com.example.ui.MesReservation.ReservationFragment"
+        android:label="Vos Reservations"
+        tools:layout="@layout/reservation" />
+
+    <fragment
+        android:id="@+id/nav_parametre"
+        android:name="com.example.ui.Modifier.Modifierprofile"
+        android:label="Modifier votre profile"
+        tools:layout="@layout/activity_modifier__profile" />
+
+    <fragment
+        android:id="@+id/nav_apropos"
+        android:name="com.example.ui.apropos.AproposFragment"
+        android:label="Apropos Nous "
+        tools:layout="@layout/fragment_apropos" />
+
+    <fragment
+        android:id="@+id/nav_bank"
+        android:name="com.example.ui.Accueil.BankActivity"
+        android:label="Services Bank"
+        tools:layout="@layout/activity_bank" />
+
+
+    <fragment
+        android:id="@+id/nav_choisir"
+        android:name="com.example.welcome"
+        tools:layout="@layout/activity_welcome"/>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.ui.MesReservation.ReservationFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/activity_ticket" />
+</navigation>

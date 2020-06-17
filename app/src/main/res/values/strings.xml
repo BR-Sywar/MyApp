@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_setting">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string name="api_key">AIzaSyAmXebQCFO28bBsaDzqvYcKhPfsRO06F4E</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="swipe_left_for_register">Swipe Left for Register</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="e_mail">Email</string>
+    <string name="tag">Let\'s join us and \nBuild your relationship with others</string>
+    <string name="swipe_right_for_login">Swipe Right for Login</string>
+    <string name="register">Register</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="your_name">Full Name</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="developer_appsnipp_com" />
+    <string name="appsnippuser" />
+    <string name="back_to_nhome" />
+    <string name="mon_profile">Mon profile</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="tickiet">TicketView</string>
+    <string name="actualite">actualite</string>
+    <string name="Actualite">Actualite</string>
+    <string name="bienvenue">Bienvenue</string>
+    <string name="acceuil">Acceuil</string>
+    <string name="bienvenue_ch_re_client">Bienvenue Chére client</string>
+    <string name="nom">Nom</string>
+    <string name="mes_r_servation">Mes Réservation</string>
+    <string name="mes_reservation">Mes reservation</string>
+    <string name="modifier_mes_cordonn_es">Modifier mes cordonnées</string>
+    <string name="adress_mail">adress mail</string>
+    <string name="here_s_nyour_first_nstep_with_nus">Here’s\nyour first\nstep with \nus!</string>
+    <string name="votre_ticket">Votre Ticket</string>
+    <string name="local">et_local</string>
+    <string name="large_text">
+      "Notre application est une application Android"
+        "Cette application à comme objectif de faciliter et limiter votre temps d'attente ainsi
+        que de réserver votre tour dans une file d'attente dans des différents secteurs
+        banques, poste, institution gouvernementale, hôpital,....
+        De plus l'application vous informe sur l'état de la file d'attente, la position géographique
+        de certains agence, bureau dont vous avez besoin,
+        Vous pouvez savoir les horaires,les nouveautés des services, les coordonnées de responsables,
+        ainsi recevoir des bonification."
+
+    </string>
+    <string name="service_sant">Service Santé</string>
+    <string name="service_publics">Service Publics</string>
+
+    <string name="poste">Poste</string>
+    <string name="mes_r_servations">Mes Réservations</string>
+    <string name="search">Search</string>
+    <string name="accueil">Accueil</string>
+    <string name="todo">TODO</string>
+    <string name="bienvenue_chers_clients">Bienvenue Chers Clients</string>
+    <string name="continuer_en_tant_qu_invit">Continuer en tant qu\'invité</string>
+
+    <string-array name="Services">
+        <item>Santé</item>
+        <item>Bureaux</item>
+        <item>Poste</item>
+        <item>Bank</item>
+    </string-array>
+</resources>

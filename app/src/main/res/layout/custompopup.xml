@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="475dp"
+    android:layout_gravity="center"
+    android:background="@drawable/color"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:ignore="Orientation">
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="48dp"
+        android:layout_height="76dp"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:background="@drawable/cerclebackground"
+        android:text="X"
+        android:textColor="@color/quantum_vanillared600"
+        android:textSize="30dp"
+        android:backgroundTint="@color/quantum_white_100"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=" Poste "
+            android:textSize="35dp"
+            android:textStyle="italic|bold"
+            android:textColor="@color/quantum_vanillared600"/>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="89dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/poste_icon" />
+
+            <Button
+                android:id="@+id/Mes"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/buttonstyle"
+                android:text="Mes Actualité"
+                android:backgroundTint="@color/quantum_white_100"
+                android:textColor="@color/quantum_vanillared600" />
+
+            <Button
+                android:id="@+id/Rdv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/buttonstyle"
+                android:text="réserver ticket "
+
+                android:textColor="@color/quantum_vanillared600"
+                android:backgroundTint="@color/quantum_white_100"/>
+
+            <Button
+                android:id="@+id/pluspos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/buttonstyle"
+                android:text="plus détaillé "
+                android:textColor="@color/quantum_vanillared600"
+                android:backgroundTint="@color/quantum_white_100"/>
+
+            </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
