@@ -17,10 +17,20 @@
         android:layout_marginLeft="25dp"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="60dp"
         android:fontFamily="sans-serif-thin"
         android:text="Au revoir Chers Clients"
         android:textColor="@color/contentTextColor"
         android:textSize="50sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_logout"
+        android:drawableStart="@drawable/deconnexion"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/deconnexion"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="déconnexion"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.Api;
+package com.example.ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,6 +17,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.Api.MySingleton;
+import com.example.Api.Urls;
 import com.example.myapp.R;
 
 import org.json.JSONArray;

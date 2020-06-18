@@ -80,4 +80,8 @@
         android:name="com.example.ui.MesReservation.ReservationFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/activity_ticket" />
+    <fragment android:id="@+id/nav_deconnexion"
+        android:name="com.example.ui.Deconnexion.Deconnexion"
+        android:label="Déconnexion"
+        tools:layout="@layout/fragment_deconnexion"/>
 </navigation>

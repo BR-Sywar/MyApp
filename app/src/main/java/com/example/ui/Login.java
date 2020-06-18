@@ -1,4 +1,4 @@
-package com.example.Api;
+package com.example.ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,24 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.example.MainActivity;
 import com.example.myapp.R;
+import com.example.network.RetrofitInstance;
+import com.example.network.api.AuthApi;
+import com.example.network.response.LoginResponse;
+import com.example.utils.SessionHandler;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
+import kotlin.io.TextStreamsKt;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class Login extends AppCompatActivity {
 
@@ -33,8 +34,10 @@ public class Login extends AppCompatActivity {
     String Email, Password;
     Button login;
     ImageView Registre;
-
+    AuthApi api ;
     AlertDialog.Builder builder;
+    SessionHandler sessionHandler ;
+    ProgressBar mProgressBar ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +48,13 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.et_password);
         Registre = findViewById(R.id.swipeup_login);
         login = findViewById(R.id.btn_login);
-
+        mProgressBar = findViewById(R.id.login_progressBar);
+        sessionHandler = SessionHandler.getInstance(getApplicationContext());
+        api = RetrofitInstance.getInstance().create(AuthApi.class);
         Registre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getApplicationContext(), Registre.class);
+                Intent myIntent = new Intent(getApplicationContext(), com.example.ui.Registre.class);
                 startActivity(myIntent);
             }
         });
@@ -64,6 +69,40 @@ public class Login extends AppCompatActivity {
                     builder.setTitle("une chose et en erreur");
                     displayAlert("Enter a validate email and password ");
                 } else {
+                        mProgressBar.setVisibility(View.VISIBLE);
+                    Call<LoginResponse> call = api.loginUser(Email , Password) ;
+                    call.enqueue(new Callback<LoginResponse>() {
+                        @Override
+                        public void onResponse(Call<LoginResponse> call, retrofit2.Response<LoginResponse> response) {
+                            LoginResponse loginResponse = response.body() ;
+                            mProgressBar.setVisibility(View.GONE);
+                            if ( response.code() != 200)
+                             {  String error = "" ;
+                                 try {
+                                     JSONObject jsonObject = new JSONObject( TextStreamsKt.readText(response.errorBody().charStream())) ;
+                                     error = jsonObject.getString("error");
+                                 } catch (JSONException e) {
+                                     e.printStackTrace();
+                                 }
+                                 displayAlert( error);
+                             } else if (loginResponse.getData() != null) {
+
+                              sessionHandler.loginUser(loginResponse.getData());
+                                Intent intent = new Intent(Login.this, MainActivity.class) ;
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NO_HISTORY) ;
+                                startActivity(intent);
+
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<LoginResponse> call, Throwable t) {
+                            Toast.makeText(Login.this, "error", Toast.LENGTH_LONG).show();
+                            mProgressBar.setVisibility(View.GONE);
+                        }
+                    });
+
+                    /*
                     StringRequest stringRequest = new StringRequest(Request.Method.POST,  Urls.URL_LOGIN,
                             new Response.Listener<String>() {
                                 @Override
@@ -97,6 +136,8 @@ public class Login extends AppCompatActivity {
                         }
                     };
                     MySingleton.getInstance(Login.this).addToRequestque(stringRequest);
+                    */
+
         }
     }
 
