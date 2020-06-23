@@ -8,9 +8,15 @@ import android.widget.AdapterView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.data.adapters.DropCategoryAdapter;
 import com.example.data.adapters.DropEntrepriseAdapter;
 import com.example.data.adapters.EventAdapter;
-import com.example.data.adapters.DropCategoryAdapter;
+import com.example.data.models.Category;
 import com.example.data.models.Entreprise;
 import com.example.myapp.R;
 import com.example.network.RetrofitInstance;
@@ -19,11 +25,6 @@ import com.example.network.api.EntrepriseApi;
 import com.example.network.response.CategoryResponse;
 import com.example.network.response.EntrepriseResponse;
 import com.example.network.response.EventResponse;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -147,6 +148,17 @@ public class ActualitesFragment extends Fragment {
                 mProgressBar.setVisibility(View.GONE);
             }
         });
+        category_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Category category =  categoryAdapter.getItem(position);
+                getEntreprises(category.getId());
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }
