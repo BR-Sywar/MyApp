@@ -238,6 +238,12 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Login"
             android:textSize="15sp" />
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:id="@+id/register_progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
 
     </RelativeLayout>
 

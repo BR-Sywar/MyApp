@@ -209,5 +209,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:src="@drawable/ic_menu_camera"
             tools:layout_editor_absoluteX="117dp"
             tools:layout_editor_absoluteY="110dp" />
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/update_progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
     </RelativeLayout>
 </LinearLayout>

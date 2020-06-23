@@ -16,6 +16,7 @@ import com.example.data.models.User;
 import com.example.myapp.R;
 import com.example.ui.MesReservation.ReservationFragment;
 import com.example.ui.Modifier.Modifierprofile;
+import com.example.utils.CustomLoginDialog;
 import com.example.utils.SessionHandler;
 
 public class ProfileFragment extends Fragment {
@@ -23,6 +24,7 @@ public class ProfileFragment extends Fragment {
     private TextView et_email , et_nom,et_tel,et_local,et_ticket;
     private Button btn_modif;
     private SessionHandler sessionHandler ;
+    CustomLoginDialog customLoginDialog ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +33,7 @@ public class ProfileFragment extends Fragment {
         final View root = inflater.inflate(R.layout.fragment_profile, container, false);
 
         sessionHandler =SessionHandler.getInstance(getContext());
+        customLoginDialog = new CustomLoginDialog(getContext());
         btn_modif = root.findViewById(R.id.btn_modif);
         btn_modif.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +67,8 @@ public class ProfileFragment extends Fragment {
             et_email.setText(user.getEmail());
             et_tel.setText(user.getTel());
             et_local.setText(user.getAdresse());
+        } else {
+            customLoginDialog.show();
         }
 
     }

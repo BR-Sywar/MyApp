@@ -5,58 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E7F4F0"
+    android:padding="10dp"
     android:orientation="vertical"
     >
+    <Spinner
+        android:id="@+id/spinner_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Spinner
+        android:id="@+id/spinner_entre"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/divider"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
-        android:layout_height="26dp" />
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:paddingLeft="4dip"
-        android:paddingRight="4dip"
-        >
-
-
-        <TextView
-            android:id="@+id/POS"
-            android:layout_width="154dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/post"
-            android:gravity="left"
-            android:paddingLeft="2dp"
-            android:scrollHorizontally="false"
-            android:text="@string/poste"
-            android:textColor="@color/oran"
-            android:textSize="15sp"
-            tools:gravity="center"
-            android:layout_marginStart="5dp"
-            android:layout_toEndOf="@id/post"
-            android:paddingStart="2dp" />
-
-        <ImageView
-            android:id="@+id/post"
-            android:layout_width="153dp"
-            android:layout_height="81dp"
-            android:src="@drawable/poste_icon" />
-
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="4sp"
-        android:background="#E7F4F0"/>
-
-    <ListView
-        android:id="@+id/myListe"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_events"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

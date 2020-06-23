@@ -62,7 +62,7 @@
         <activity android:name="com.example.ui.Accueil.BankActivity" />
         <activity android:name="com.example.ui.Accueil.PublicFragment" />
         <activity android:name="com.example.ui.Accueil.PosteFragment" />
-        <activity android:name="com.example.ui.Accueil.SanteFragment" />
+        <activity android:name="com.example.ui.Accueil.EntrepriseFragment" />
         <activity android:name="com.example.ui.Maps.MapsService" />
         <activity android:name="com.example.ui.apropos.AproposFragment" />
         <activity android:name="com.example.ui.ticket.ticketActivity" />

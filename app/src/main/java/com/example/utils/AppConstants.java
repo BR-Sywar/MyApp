@@ -9,8 +9,10 @@ import android.widget.ListView;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class AppConstants {
 
@@ -26,7 +28,7 @@ public class AppConstants {
     public static final String KEY_CODE_POSTAL= "codePostal";
     public static final String KEY_ID = "id";
     public static final String KEY_API_KEY = "api_key";
-
+    public  static  final  SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 
 
 

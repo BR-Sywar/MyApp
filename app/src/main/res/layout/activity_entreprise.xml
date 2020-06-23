@@ -6,48 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.example.ui.Accueil.SanteFragment"
+    tools:context="com.example.ui.Accueil.EntrepriseFragment"
     tools:ignore="MissingDefaultResource">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="97dp">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="112dp"
-            android:layout_height="78dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="48dp"
-            android:layout_marginRight="48dp"
-            android:layout_marginBottom="7dp"
-            app:srcCompat="@drawable/phar" />
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="181dp"
-            android:layout_height="41dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp" />
-    </RelativeLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_marginTop="14dp"
-        android:orientation="horizontal">
-
-        <View
-            android:layout_width="370dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
-            android:background="#fff" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -71,6 +32,7 @@
                 android:padding="8dp">
 
                 <ImageView
+                    android:id="@+id/logo_entre"
                     android:layout_width="72dp"
                     android:layout_height="95dp"
                     android:layout_alignParentRight="true"
@@ -80,6 +42,7 @@
                     app:srcCompat="@drawable/phar" />
 
                 <TextView
+                    android:id="@+id/title_entre"
                     android:layout_width="238dp"
                     android:layout_height="53dp"
                     android:layout_alignParentEnd="true"
@@ -99,6 +62,16 @@
 
 
     </LinearLayout>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <ListView
+        android:id="@+id/list_entreprise"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </LinearLayout>

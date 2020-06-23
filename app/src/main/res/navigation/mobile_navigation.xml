@@ -24,20 +24,11 @@
 
     </fragment>
     <fragment
-        android:id="@+id/nav_sante"
-        android:name="com.example.ui.Accueil.SanteFragment"
-        android:label="Services Sante"
-        tools:layout="@layout/activity_sante" />
-    <fragment
-        android:id="@+id/nav_post"
-        android:name="com.example.ui.Accueil.PosteFragment"
-        android:label="Services Poste"
-        tools:layout="@layout/activity_sante" />
-    <fragment
-        android:id="@+id/nav_public"
-        android:name="com.example.ui.Accueil.PublicFragment"
-        android:label="Services Publics"
-        tools:layout="@layout/activity_sante" />
+        android:id="@+id/nav_entre"
+        android:name="com.example.ui.Accueil.EntrepriseFragment"
+        android:label="Entreprises"
+        tools:layout="@layout/activity_entreprise" />
+
 
     <fragment
         android:id="@+id/nav_profile"
@@ -62,13 +53,6 @@
         android:name="com.example.ui.apropos.AproposFragment"
         android:label="Apropos Nous "
         tools:layout="@layout/fragment_apropos" />
-
-    <fragment
-        android:id="@+id/nav_bank"
-        android:name="com.example.ui.Accueil.BankActivity"
-        android:label="Services Bank"
-        tools:layout="@layout/activity_bank" />
-
 
     <fragment
         android:id="@+id/nav_choisir"
