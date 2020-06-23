@@ -31,6 +31,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.utils.AppConstants.BASE_URL;
+
 public class EntrepriseFragment extends Fragment  {
     private Category category ;
     private ListView mListView ;
@@ -52,7 +54,7 @@ public class EntrepriseFragment extends Fragment  {
         if (getArguments() != null) {
             category = getArguments().getParcelable("cat");
             title.setText(category.getNom());
-            Glide.with(getContext()).load("http://193.70.3.61/tikiti/public/uploads/categories/icones/5ec2ef221e48b809445440.png").into(logo);
+            Glide.with(getContext()).load(BASE_URL+category.getIcone()).into(logo);
             getEntreprises();
         }
         return root ;

@@ -18,6 +18,8 @@ import com.example.myapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.utils.AppConstants.BASE_URL;
+
 // Creating an Adapter Class
 public class DropCategoryAdapter extends ArrayAdapter<Category> {
 
@@ -49,7 +51,7 @@ public class DropCategoryAdapter extends ArrayAdapter<Category> {
         ImageView image = (ImageView)listItem.findViewById(R.id.img_item);
         TextView name = (TextView) listItem.findViewById(R.id.tv_item);
         if (category!=null)
-        { Glide.with(getContext()).load(category.getIcone()).into(image) ;
+        { Glide.with(getContext()).load(BASE_URL+category.getIcone()).into(image) ;
 
 
         name.setText(category.getNom());

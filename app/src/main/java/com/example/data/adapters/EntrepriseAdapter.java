@@ -15,6 +15,8 @@ import com.example.myapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.utils.AppConstants.BASE_URL;
+
 public  class EntrepriseAdapter extends BaseAdapter  {
     private List<Entreprise> entrepriseList;
     private Context context;
@@ -58,7 +60,7 @@ public  class EntrepriseAdapter extends BaseAdapter  {
         else  {holder = (ViewHolder)convertView.getTag();}
         holder.tv_title.setText(entreprise.getNom());
         Glide.with(context)
-                .load(entreprise.getLogo())
+                .load(BASE_URL+entreprise.getLogo())
                 .into(holder.entreprise_logo) ;
         return convertView;
     }

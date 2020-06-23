@@ -18,6 +18,8 @@ import com.example.myapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.utils.AppConstants.BASE_URL;
+
 // Creating an Adapter Class
 public class DropEntrepriseAdapter extends ArrayAdapter<Entreprise> {
 
@@ -46,7 +48,7 @@ public class DropEntrepriseAdapter extends ArrayAdapter<Entreprise> {
         ImageView image = (ImageView)listItem.findViewById(R.id.img_item);
         TextView name = (TextView) listItem.findViewById(R.id.tv_item);
         if (entreprise!=null)
-        {Glide.with(getContext()).load(entreprise.getLogo()).into(image) ;
+        {Glide.with(getContext()).load(BASE_URL+entreprise.getLogo()).into(image) ;
         name.setText(entreprise.getNom());}
 
 

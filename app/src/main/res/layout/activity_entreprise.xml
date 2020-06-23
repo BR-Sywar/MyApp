@@ -20,6 +20,7 @@
             android:id="@+id/cardView"
             android:layout_width="346dp"
             android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="2dp"
@@ -27,33 +28,29 @@
             app:cardBackgroundColor="#2626">
 
             <RelativeLayout
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="97dp"
+                android:layout_height="wrap_content"
                 android:padding="8dp">
 
                 <ImageView
                     android:id="@+id/logo_entre"
                     android:layout_width="72dp"
+                    android:scaleType="fitCenter"
                     android:layout_height="95dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginRight="286dp"
-                    android:layout_marginBottom="16dp"
                     app:srcCompat="@drawable/phar" />
 
                 <TextView
                     android:id="@+id/title_entre"
-                    android:layout_width="238dp"
-                    android:layout_height="53dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="38dp"
-                    android:layout_marginRight="38dp"
-                    android:layout_marginBottom="31dp"
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                   android:layout_toEndOf="@+id/logo_entre"
+                    android:layout_centerInParent="true"
                     android:text="Pharmacie"
-                    android:textSize="30dp" />
+                    android:textSize="30dp"
+                    android:layout_toRightOf="@+id/logo_entre"
+                    android:layout_marginLeft="10dp" />
 
 
             </RelativeLayout>

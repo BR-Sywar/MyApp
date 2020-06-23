@@ -29,6 +29,7 @@ public class AppConstants {
     public static final String KEY_ID = "id";
     public static final String KEY_API_KEY = "api_key";
     public  static  final  SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+    public static final String BASE_URL = "http://193.70.3.61/tikiti/" ;
 
 
 

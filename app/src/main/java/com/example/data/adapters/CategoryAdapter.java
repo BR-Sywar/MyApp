@@ -17,6 +17,8 @@ import com.example.utils.OnRecyclerViewItemClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.utils.AppConstants.BASE_URL;
+
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
     private Context mContext;
     private List<Category> categoryList;
@@ -70,7 +72,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final Category category = categoryList.get(position);
         holder.name.setText(category.getNom());
-        Glide.with(mContext).load(category.getIcone()).into(holder.photo);
+        Glide.with(mContext).load(BASE_URL +category.getIcone()).into(holder.photo);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

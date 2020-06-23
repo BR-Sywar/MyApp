@@ -99,6 +99,7 @@ public class ActualitesFragment extends Fragment {
                 if (entrepriseResponse != null && entrepriseResponse.getEntreprises() != null) {
                     entrepriseAdapter = new DropEntrepriseAdapter(getContext(),entrepriseResponse.getEntreprises()) ;
                     entreprise_spinner.setAdapter(entrepriseAdapter);
+                    if (entrepriseResponse.getEntreprises().size()>0)
                     getEvents(entrepriseResponse.getEntreprises().get(0).getId());
 
                 }
