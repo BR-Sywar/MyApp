@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sv_location"
+        android:visibility="gone"
         android:queryHint="Recherche..."
         android:iconifiedByDefault="false"
         android:layout_margin="10dp"
@@ -28,8 +29,15 @@
         android:background="#fff">
 
 
-
     </SearchView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entre_recycler"
+        android:visibility="gone"
+        android:layout_margin="7dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <!-- <RelativeLayout
         android:layout_width="match_parent"

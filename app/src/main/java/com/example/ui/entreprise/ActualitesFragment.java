@@ -1,4 +1,4 @@
-package com.example.ui.Accueil;
+package com.example.ui.entreprise;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

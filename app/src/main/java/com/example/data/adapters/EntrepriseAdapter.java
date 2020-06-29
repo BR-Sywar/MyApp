@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.data.models.Entreprise;
 import com.example.myapp.R;
+import com.example.utils.OnRecyclerViewItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ import static com.example.utils.AppConstants.BASE_URL;
 public  class EntrepriseAdapter extends BaseAdapter  {
     private List<Entreprise> entrepriseList;
     private Context context;
+    private OnRecyclerViewItemClickListener listener ;
     public EntrepriseAdapter(Context context) {
         this.context=context;
     }
@@ -28,15 +30,18 @@ public  class EntrepriseAdapter extends BaseAdapter  {
         this.entrepriseList = entrepriseList;
         notifyDataSetChanged();
     }
+    public void  setOnItemClickListener(OnRecyclerViewItemClickListener listener) {
+        this.listener =listener ;
+    }
 
     @Override
     public int getCount() {
         if (entrepriseList==null) return 0;
         return entrepriseList.size();
     }
-    @Override
-    public Object getItem(int position) {
-        return position;
+
+    public  Entreprise getItem (int position) {
+        return  entrepriseList.get(position) ;
     }
     @Override
     public long getItemId(int position) {
@@ -44,7 +49,7 @@ public  class EntrepriseAdapter extends BaseAdapter  {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder  ;
         Entreprise entreprise = entrepriseList.get(position);
         if(convertView == null) {
@@ -62,6 +67,12 @@ public  class EntrepriseAdapter extends BaseAdapter  {
         Glide.with(context)
                 .load(BASE_URL+entreprise.getLogo())
                 .into(holder.entreprise_logo) ;
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onRecyclerViewItemClicked(position,0);
+            }
+        });
         return convertView;
     }
     @Override

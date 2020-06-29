@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.example.ui.Accueil.EntrepriseFragment"
+    tools:context="com.example.ui.entreprise.EntrepriseFragment"
     tools:ignore="MissingDefaultResource">
 
 
@@ -22,6 +22,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
             app:cardCornerRadius="8dp"
             app:cardElevation="2dp"
             android:background="@drawable/cerclebackground"

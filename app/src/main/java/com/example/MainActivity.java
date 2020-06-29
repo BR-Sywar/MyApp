@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     private DrawerLayout drawer;
     private AppBarConfiguration mAppBarConfiguration ;
     private  NavigationView navigationView ;
+    private  NavController navController ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         navigationView = findViewById(R.id.nav_view);
         setupNavigation();
+        Bundle bundle = getIntent().getExtras() ;
+        if (bundle != null) {
+            navController.navigate(R.id.nav_details_bureaux,bundle);
+        }
 
 
     }
@@ -47,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                 R.id.nav_parametre,R.id.nav_apropos,R.id.nav_deconnexion,R.id.nav_Actualites)
                 .setDrawerLayout(drawer)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         // navigationView.setNavigationItemSelectedListener(this);

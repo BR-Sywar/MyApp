@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/nav_Actualites"
-        android:name="com.example.ui.Accueil.ActualitesFragment"
+        android:name="com.example.ui.entreprise.ActualitesFragment"
         android:label="@string/Actualite"
         tools:layout="@layout/fragment_actualites">
 
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_entre"
-        android:name="com.example.ui.Accueil.EntrepriseFragment"
+        android:name="com.example.ui.entreprise.EntrepriseFragment"
         android:label="Entreprises"
         tools:layout="@layout/activity_entreprise" />
 
@@ -39,7 +39,7 @@
     <fragment
         android:id="@+id/nav_reservation"
         android:name="com.example.ui.MesReservation.ReservationFragment"
-        android:label="Vos Reservations"
+        android:label="Mes Reservations"
         tools:layout="@layout/reservation" />
 
     <fragment
@@ -60,10 +60,10 @@
         tools:layout="@layout/activity_welcome"/>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.ui.MesReservation.ReservationFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/activity_ticket" />
+        android:id="@+id/nav_details_bureaux"
+        android:label="Details Bureaux"
+        android:name="com.example.ui.entreprise.DetailsBureauxFragment"
+        tools:layout="@layout/fragment_details_bureaux"/>
     <fragment android:id="@+id/nav_deconnexion"
         android:name="com.example.ui.Deconnexion.Deconnexion"
         android:label="Déconnexion"

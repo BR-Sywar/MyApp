@@ -1,4 +1,4 @@
-package com.example.ui.Accueil;
+package com.example.ui.entreprise;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,12 +16,14 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.data.adapters.EntrepriseAdapter;
 import com.example.data.models.Category;
+import com.example.data.models.Entreprise;
 import com.example.myapp.R;
 import com.example.network.RetrofitInstance;
 import com.example.network.api.EntrepriseApi;
 import com.example.network.response.EntrepriseResponse;
 import com.example.ui.Maps.Maps;
 import com.example.ui.ui.SpinnerInteractionListener;
+import com.example.utils.OnRecyclerViewItemClickListener;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -41,6 +43,7 @@ public class EntrepriseFragment extends Fragment  {
     private ProgressBar mProgressBar ;
     private TextView title ;
     private ImageView logo ;
+    private CardView cardView ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,6 +51,7 @@ public class EntrepriseFragment extends Fragment  {
             mListView = root.findViewById(R.id.list_entreprise);
             title = root.findViewById(R.id.title_entre);
             logo = root.findViewById(R.id.logo_entre);
+            cardView = root.findViewById(R.id.cardView);
             mProgressBar = root.findViewById(R.id.progressBar);
             entrepriseAdapter = new EntrepriseAdapter(getContext());
             mListView.setAdapter(entrepriseAdapter);
@@ -80,5 +84,28 @@ public class EntrepriseFragment extends Fragment  {
                 mProgressBar.setVisibility(View.GONE);
             }
         });
+        entrepriseAdapter.setOnItemClickListener(new OnRecyclerViewItemClickListener() {
+            @Override
+            public void onRecyclerViewItemClicked(int position, int id) {
+                Entreprise entreprise = entrepriseAdapter.getItem(position);
+                Intent intent =  new Intent(getContext(),Maps.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("entre",entreprise);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+            }
+        });
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(getContext(),Maps.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("cat",category);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
     }
+
 }

@@ -4,19 +4,13 @@
     package="com.example.myapp">
 
 
-
-
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -51,23 +45,9 @@
         <activity android:name="com.example.ui.Login" />
         <activity android:name="com.example.ui.Registre" />
         <activity android:name="com.example.MainActivity" />
-        <activity
-            android:name="com.example.ui.profile.ProfileFragment"
-            android:label="@layout/fragment_profile"
-            android:theme="@style/AppTheme.ProfileTheme" />
-        <activity android:name="com.example.ui.Modifier.Modifierprofile" />
-        <activity android:name="com.example.ui.profile.LoginFragment" />
-        <activity android:name="com.example.ui.profile.RegisterFragment" />
-        <activity android:name="com.example.ui.Accueil.ActualitesFragment" />
-        <activity android:name="com.example.ui.Accueil.BankActivity" />
-        <activity android:name="com.example.ui.Accueil.PublicFragment" />
-        <activity android:name="com.example.ui.Accueil.PosteFragment" />
-        <activity android:name="com.example.ui.Accueil.EntrepriseFragment" />
         <activity android:name="com.example.ui.Maps.MapsService" />
-        <activity android:name="com.example.ui.apropos.AproposFragment" />
         <activity android:name="com.example.ui.ticket.ticketActivity" />
-        <activity android:name="com.example.ui.ui.popupmarker" />
-        <activity android:name="com.example.ui.Deconnexion.Deconnexion" />
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
