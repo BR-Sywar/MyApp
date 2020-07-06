@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context="com.example.ui.Maps.Maps">
 
 
@@ -13,10 +14,18 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/entre_recycler"
         android:id="@+id/map"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
-
+    <ImageView
+        android:id="@+id/gps"
+        android:layout_margin="10dp"
+        android:layout_below="@id/sv_location"
+        android:src="@drawable/ic_baseline_gps_fixed_24"
+        android:tint="@color/quantum_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +42,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/entre_recycler"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_margin="7dp"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"

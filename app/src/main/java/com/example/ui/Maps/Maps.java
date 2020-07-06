@@ -3,6 +3,7 @@ package com.example.ui.Maps;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.PorterDuff;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -72,6 +74,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
     private EntrepriseMapAdapter entrepriseMapAdapter ;
     private EntrepriseApi api ;
     List<Entreprise> list = new ArrayList<>();
+    private ImageView mGps ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,39 +85,9 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
         category = getIntent().getParcelableExtra("cat") ;
         searchView = findViewById(R.id.sv_location);
         api = RetrofitInstance.getInstance().create(EntrepriseApi.class);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-              /*  String location=searchView.getQuery().toString();
-                List<Address>addressList = null ;
 
-                if (location!= null || !location.equals("")){
-                    Geocoder geocoder= new Geocoder(Maps.this );
-                    try {
-                        addressList= geocoder.getFromLocationName(location,1);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    Address address= addressList.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLatitude());
-
-
-
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
-                }*/
-
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                entrepriseMapAdapter.getFilter().filter(newText);
-                return true;
-            }
-        });
         recyclerView = findViewById(R.id.entre_recycler);
+        mGps = findViewById(R.id.gps);
         getLocationPermission();
         getEntreprises();
 
@@ -181,8 +154,46 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
 
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+              /*  String location=searchView.getQuery().toString();
+                List<Address>addressList = null ;
 
+                if (location!= null || !location.equals("")){
+                    Geocoder geocoder= new Geocoder(Maps.this );
+                    try {
+                        addressList= geocoder.getFromLocationName(location,1);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    Address address= addressList.get(0);
+                    LatLng latLng = new LatLng(address.getLatitude(),address.getLatitude());
+
+
+
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+                }*/
+
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    entrepriseMapAdapter.getFilter().filter(newText);
+                    return true;
+                }
+            });
         }
+        mGps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mGps.setColorFilter(R.color.blue);
+                getDeviceLocation();
+            }
+        });
     }
 
 
@@ -203,9 +214,10 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
                             Log.d(TAG, "onComplete: found location!");
                             Location currentLocation = (Location) task.getResult();
 
-                      /*      moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
+                           moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM,
-                                    "My Location");*/
+                                    "My Location");
+
 
                         }else{
                             Log.d(TAG, "onComplete: current location is null");
@@ -219,7 +231,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
         }
     }
 
-  /*  private void moveCamera(LatLng latLng, float zoom, String title){
+    private void moveCamera(LatLng latLng, float zoom, String title){
         Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude );
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
 
@@ -231,7 +243,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
         }
 
         hideSoftKeyboard();
-    }*/
+    }
 
     private void initMap(){
         Log.d(TAG, "initMap: initializing map");
@@ -323,7 +335,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
 
 
         if (mLocationPermissionsGranted) {
-          //  getDeviceLocation();
+            getDeviceLocation();
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,

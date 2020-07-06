@@ -7,5 +7,4 @@
         android:bottom="15dp"
         android:left="15dp"
         android:right="15dp"/>
-
 </shape>

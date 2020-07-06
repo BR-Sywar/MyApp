@@ -71,9 +71,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="93dp"
         android:fontFamily="@font/roboto_regular"
-        android:background="@drawable/buttonstyle"
+        android:background="@drawable/green_button"
         android:text="@string/login"
-        android:textColor="#000" />
+        android:textColor="#fff" />
 
     <ImageView
         android:id="@+id/swipeup_login"

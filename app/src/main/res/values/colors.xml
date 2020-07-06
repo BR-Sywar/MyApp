@@ -22,7 +22,11 @@
     <color name="maron">#6d311a</color>
     <color name="rosb">#f3d0c2</color>
 
-
+    <color name="green">#029E0A</color>
+    <color name="green_white">#2FAA35</color>
+    <color name="shadow">#283F3F3F</color>
+    <color name="green_disable">#E65CB861</color>
+    <color name="blue">#1E88E5</color>
 
 
 </resources>

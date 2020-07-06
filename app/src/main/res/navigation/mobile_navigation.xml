@@ -14,7 +14,11 @@
 
     </fragment>
 
-
+    <fragment
+        android:id="@+id/nav_Act"
+        android:name="com.example.ui.entreprise.ActualitesEntrepriseFragment"
+        android:label="@string/Actualite"
+        tools:layout="@layout/fragment_entreprise_actualites"/>
     <fragment
         android:id="@+id/nav_Actualites"
         android:name="com.example.ui.entreprise.ActualitesFragment"

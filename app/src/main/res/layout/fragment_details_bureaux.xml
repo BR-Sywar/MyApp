@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="5"
-    android:background="#E7F4F0"
-    android:padding="10dp"
+    
+    android:padding="5dp"
     android:orientation="vertical"
     >
     <LinearLayout
@@ -24,6 +24,7 @@
 
         <TextView
             android:id="@+id/d_name"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -51,22 +52,40 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/d_address"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawablePadding="5dp"
+                android:textColor="@color/darkTextColor"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                />
+
             <TextView
                 android:id="@+id/d_ville"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_baseline_location_city_24"
                 android:layout_width="wrap_content"
+                android:textColor="@color/darkTextColor"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/d_email"
+                android:drawableStart="@drawable/ic_email"
                 android:textSize="12sp"
+                android:textColor="@color/darkTextColor"
+                android:drawablePadding="5dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                 />
             <TextView
                 android:id="@+id/d_tel"
+                android:drawablePadding="5dp"
+                android:textColor="@color/darkTextColor"
+                android:drawableStart="@drawable/ic_phone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                 />
             <TextView
+                android:drawableStart="@drawable/ic_baseline_local_mall_24"
+                android:drawablePadding="5dp"
                 android:id="@+id/d_code_Postal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -89,9 +108,35 @@
             <TextView
                 android:id="@+id/tv_horaires"
                 android:text="Horaires"
-                android:padding="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_horaires"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btn_actualite"
+                android:text="@string/Actualite"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingRight="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:background="@drawable/green_button"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"/>
         </LinearLayout>
 
 
@@ -110,7 +155,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Numero entrain de servie"
+            android:text="Numero entrain de servie:"
 
             android:textSize="16sp"
 
@@ -120,6 +165,7 @@
         <TextView
             android:id="@+id/num_servi"
             android:text="16"
+            android:textColor="@color/darkTextColor"
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="23sp"
@@ -127,9 +173,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
         <TextView
-            android:text="Numero entrain de servie"
+            android:text="Dernier numero reservé:"
             android:textSize="16sp"
             android:singleLine="false"
+
             android:layout_weight="0.6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
@@ -138,6 +185,7 @@
            android:id="@+id/dernier_num"
             android:textSize="23sp"
             android:singleLine="false"
+            android:textColor="@color/darkTextColor"
             android:layout_weight="0.4"
             android:layout_gravity="center"
             android:gravity="center"
@@ -149,12 +197,14 @@
     <Button
         android:id="@+id/btn_reserve"
         android:text="Reserver"
+        android:layout_marginTop="20dp"
         android:textAllCaps="false"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         android:paddingRight="30dp"
         android:fontFamily="@font/roboto_regular"
-        android:background="@drawable/buttonstyle"
+        android:textColor="@color/white"
+        android:background="@drawable/green_button"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

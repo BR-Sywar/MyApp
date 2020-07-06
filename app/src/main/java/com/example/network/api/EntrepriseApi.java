@@ -2,6 +2,7 @@ package com.example.network.api;
 
 import com.example.network.response.EntrepriseResponse;
 import com.example.network.response.EventResponse;
+import com.example.network.response.HoraireResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -13,4 +14,6 @@ public interface EntrepriseApi {
     Call<EntrepriseResponse> getEntreprises(@Path("id") int id);
     @GET("entreprise-event/{id}")
     Call<EventResponse> getEvents(@Path("id") int id);
+    @GET("entreprise-horaire/{id}")
+    Call<HoraireResponse> getHoraires(@Path("id") int id) ;
 }
