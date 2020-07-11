@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:padding="10dp"
     android:layout_margin="10dp"
-    android:background="@drawable/raduis_bg"
+    android:background="@drawable/buttonstyle"
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <LinearLayout
@@ -12,8 +12,8 @@
         android:padding="3dp"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Numero de reservation:"
-
+            android:text="Numéro de réservation:  "
+            android:textColor="#000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -29,7 +29,8 @@
         android:padding="3dp"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Nom entreprise:"
+            android:text="Nom entreprise:  "
+            android:textColor="#000"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -46,7 +47,8 @@
         android:padding="3dp"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Nom Utilisateur:"
+            android:text="Nom Utilisateur: "
+            android:textColor="#000"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -63,7 +65,8 @@
         android:padding="3dp"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Date:"
+            android:text="Date:  "
+            android:textColor="#000"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -80,7 +83,8 @@
         android:padding="3dp"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Nom Heure:"
+            android:text="Heure:   "
+            android:textColor="#000"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

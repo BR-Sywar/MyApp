@@ -14,12 +14,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.example.Api.MySingleton;
-import com.example.Api.Urls;
 import com.example.MainActivity;
 import com.example.data.models.User;
 import com.example.myapp.R;
@@ -28,12 +22,8 @@ import com.example.network.api.AuthApi;
 import com.example.network.response.RegisterResponse;
 import com.example.utils.SessionHandler;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import kotlin.io.TextStreamsKt;
 import retrofit2.Call;

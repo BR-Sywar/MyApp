@@ -45,7 +45,7 @@ public class CustomLoginDialog {
             public void onClick(View v) {
                 alertDialog1.dismiss();
            Intent intent=     new Intent(mContext, Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NO_HISTORY) ;
+        //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NO_HISTORY) ;
 
                 mContext.startActivity(intent);
             }

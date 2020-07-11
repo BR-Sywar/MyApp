@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.example.data.adapters.EntrepriseAdapter;
@@ -22,12 +22,7 @@ import com.example.network.RetrofitInstance;
 import com.example.network.api.EntrepriseApi;
 import com.example.network.response.EntrepriseResponse;
 import com.example.ui.Maps.Maps;
-import com.example.ui.ui.SpinnerInteractionListener;
 import com.example.utils.OnRecyclerViewItemClickListener;
-
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import retrofit2.Call;
 import retrofit2.Callback;

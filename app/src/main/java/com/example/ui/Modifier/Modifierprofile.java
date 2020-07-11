@@ -60,8 +60,6 @@ public class Modifierprofile extends Fragment {
         Telephone = root.findViewById(R.id.Tel);
         ville = root.findViewById(R.id.ville);
         remdp = root.findViewById(R.id.remdp);
-        pdp = root.findViewById(R.id.pdp);
-        camera = root.findViewById(R.id.camera);
         sessionHandler = SessionHandler.getInstance(getContext());
         customLoginDialog = new CustomLoginDialog(getContext()) ;
         mProgressBar = root.findViewById(R.id.update_progressBar);

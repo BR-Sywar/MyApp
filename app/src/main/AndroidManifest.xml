@@ -45,8 +45,6 @@
         <activity android:name="com.example.ui.Login" />
         <activity android:name="com.example.ui.Registre" />
         <activity android:name="com.example.MainActivity" />
-        <activity android:name="com.example.ui.Maps.MapsService" />
-        <activity android:name="com.example.ui.ticket.ticketActivity" />
 
 
         <meta-data

@@ -26,8 +26,8 @@
             android:focusable="true"
             app:cardCornerRadius="8dp"
             app:cardElevation="2dp"
-            android:background="@drawable/cerclebackground"
-            app:cardBackgroundColor="#2626">
+            android:background="@drawable/buttonstyle"
+            app:cardBackgroundColor="#2A4A71E6">
 
             <RelativeLayout
                 android:gravity="center_vertical"
@@ -50,7 +50,7 @@
                    android:layout_toEndOf="@+id/logo_entre"
                     android:layout_centerInParent="true"
                     android:text="Pharmacie"
-                    android:textSize="30dp"
+                    android:textSize="20dp"
                     android:layout_toRightOf="@+id/logo_entre"
                     android:layout_marginLeft="10dp" />
 

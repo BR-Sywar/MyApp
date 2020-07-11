@@ -3,34 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/deco"
+    android:background="@drawable/welcomee"
     tools:context="com.example.ui.Deconnexion.Deconnexion">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="298dp"
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="211dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="sans-serif-thin"
-        android:text="Au revoir Chers Clients"
-        android:textColor="@color/contentTextColor"
-        android:textSize="50sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/btn_logout"
-        android:drawableStart="@drawable/deconnexion"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="73dp"
+        android:background="@drawable/_inscrit"
         android:drawablePadding="10dp"
-        android:drawableLeft="@drawable/deconnexion"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:text="déconnexion"
-        android:layout_height="wrap_content"/>
+        android:textColor="#fff"
+        android:text="déconnexion" />
 
 </RelativeLayout>

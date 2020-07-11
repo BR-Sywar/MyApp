@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#2626"
-    tools:context="com.example.ui.profile.RegisterFragment">
+
 
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+    android:layout_gravity="center"
+    android:gravity="center"
+        android:layout_height="match_parent"
+        tools:context="com.example.ui.profile.RegisterFragment"
+       >
 
 
         <Button
@@ -28,8 +26,7 @@
             android:background="@drawable/green_button"
             android:fontFamily="@font/roboto_regular"
             android:text="Enregistrer"
-            tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="469dp" />
+             />
 
         <EditText
             android:id="@+id/Tel"
@@ -154,7 +151,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="21dp"
             android:layout_marginRight="21dp"
-            android:layout_marginBottom="252dp"
+            android:layout_marginBottom="251dp"
             android:background="@drawable/et_custom"
             android:fontFamily="@font/roboto_regular"
             android:hint="E-mail"
@@ -247,4 +244,3 @@
 
     </RelativeLayout>
 
-</LinearLayout>

@@ -13,6 +13,17 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="85dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="130dp"
+            android:contentDescription="@string/todo"
+            android:src="@mipmap/ic_launcher" />
+
         <Button
             android:id="@+id/btn_registre"
             android:layout_width="316dp"
@@ -182,33 +193,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="168dp" />
 
-        <ImageView
-            android:id="@+id/pdp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="195dp"
-            android:layout_marginRight="195dp"
-            android:layout_marginBottom="429dp"
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="14dp"
-            tools:src="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="201dp"
-            android:layout_marginRight="201dp"
-            android:layout_marginBottom="433dp"
-            android:src="@drawable/ic_menu_camera"
-            tools:layout_editor_absoluteX="117dp"
-            tools:layout_editor_absoluteY="110dp" />
         <ProgressBar
             android:visibility="gone"
             android:id="@+id/update_progressBar"

@@ -4,7 +4,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E7F4F0"
 
         tools:context="com.example.ui.MesReservation.ReservationFragment">
     <ProgressBar
@@ -20,6 +19,7 @@
         android:gravity="center"
         android:visibility="gone"
         android:textSize="18sp"
+        android:background="@drawable/buttonstyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

@@ -20,7 +20,7 @@
         android:padding="5dp"
         android:layout_height="wrap_content"
         android:text="Reserver Votre Ticket "
-        android:textColor="@color/rose"
+        android:textColor="#5779B3"
         android:textSize="25dp"
         android:textStyle="bold|italic" />
 
