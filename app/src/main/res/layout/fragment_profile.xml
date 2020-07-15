@@ -115,39 +115,17 @@
             android:orientation="horizontal"
             android:paddingLeft="25dp">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ticket" />
-
-            <TextView
-                android:id="@+id/et_ticket"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="20dp"
-                android:text="Vos ticket"
-                android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btn_modif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
-            android:paddingLeft="25dp">
-
-            <Button
-                android:id="@+id/btn_modif"
-                android:layout_width="232dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-android:background="@drawable/buttonstyle"
-                android:fontFamily="@font/roboto_regular"
-                android:text="@string/modifier_mes_cordonn_es"
-                android:textColor="#000" />
-        </LinearLayout>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/buttonstyle"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/modifier_mes_cordonn_es"
+            android:textColor="#000" />
     </LinearLayout>
 </RelativeLayout>

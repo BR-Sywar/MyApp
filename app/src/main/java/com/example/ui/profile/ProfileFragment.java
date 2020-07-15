@@ -1,6 +1,5 @@
 package com.example.ui.profile;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,19 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.example.data.models.User;
 import com.example.myapp.R;
-import com.example.ui.MesReservation.ReservationFragment;
-import com.example.ui.Modifier.Modifierprofile;
 import com.example.utils.CustomLoginDialog;
 import com.example.utils.SessionHandler;
 
 public class ProfileFragment extends Fragment {
 
-    private TextView et_email , et_nom,et_tel,et_local,et_ticket;
+    private TextView et_email , et_nom,et_tel,et_local;
     private Button btn_modif;
     private SessionHandler sessionHandler ;
     CustomLoginDialog customLoginDialog ;
@@ -46,14 +42,7 @@ public class ProfileFragment extends Fragment {
        et_email = root.findViewById(R.id.et_email);
         et_tel = root.findViewById(R.id.et_tel);
         et_local = root.findViewById(R.id.et_local);
-        et_ticket = root.findViewById(R.id.et_ticket);
-        et_ticket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(String.valueOf(ReservationFragment.class));
-                startActivity(myIntent);
-            }
-        });
+
 
 
         setProfileDetails();
