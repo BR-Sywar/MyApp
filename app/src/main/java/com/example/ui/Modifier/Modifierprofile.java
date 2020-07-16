@@ -61,7 +61,7 @@ public class Modifierprofile extends Fragment {
         ville = root.findViewById(R.id.ville);
         remdp = root.findViewById(R.id.remdp);
         sessionHandler = SessionHandler.getInstance(getContext());
-        customLoginDialog = new CustomLoginDialog(getContext()) ;
+        customLoginDialog = new CustomLoginDialog(getContext(),null) ;
         mProgressBar = root.findViewById(R.id.update_progressBar);
         api = RetrofitInstance.getInstance().create(AuthApi.class);
         setProfileDetails();

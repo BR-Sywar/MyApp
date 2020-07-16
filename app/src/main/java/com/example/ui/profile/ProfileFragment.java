@@ -29,7 +29,7 @@ public class ProfileFragment extends Fragment {
         final View root = inflater.inflate(R.layout.fragment_profile, container, false);
 
         sessionHandler =SessionHandler.getInstance(getContext());
-        customLoginDialog = new CustomLoginDialog(getContext());
+        customLoginDialog = new CustomLoginDialog(getContext(),null);
         btn_modif = root.findViewById(R.id.btn_modif);
         btn_modif.setOnClickListener(new View.OnClickListener() {
             @Override

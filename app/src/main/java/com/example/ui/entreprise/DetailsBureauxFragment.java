@@ -43,7 +43,7 @@ import retrofit2.Response;
 import static com.example.utils.AppConstants.BASE_URL;
 
 public class DetailsBureauxFragment extends Fragment {
-        private TextView nom , address ,email , tel ,ville , code_postal ;
+        private TextView nom , address ,email , tel ,ville , code_postal , dernier , servi ;
         private ImageView logo ;
         private Entreprise entreprise ;
         private Button btnReserver ,btnActualite ;
@@ -71,6 +71,8 @@ public class DetailsBureauxFragment extends Fragment {
             ville = root.findViewById(R.id.d_ville) ;
             email = root.findViewById(R.id.d_email);
             tel = root.findViewById(R.id.d_tel) ;
+            dernier = root.findViewById(R.id.dernier_num);
+            servi = root.findViewById(R.id.num_servi);
             recyclerView = root.findViewById(R.id.recycler_horaires);
             mProgressBar = root.findViewById(R.id.progressBar);
             code_postal = root.findViewById(R.id.d_code_Postal);
@@ -78,7 +80,7 @@ public class DetailsBureauxFragment extends Fragment {
             btnActualite =root.findViewById(R.id.btn_actualite);
             api = RetrofitInstance.getInstance().create(TicketApi.class);
             sessionHandler = SessionHandler.getInstance(getContext());
-            customLoginDialog = new CustomLoginDialog(getContext());
+
             setDetails();
             reserveTicket();
             btnActualite.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +103,8 @@ public class DetailsBureauxFragment extends Fragment {
                 address.setText(entreprise.getAdresse());
                 email.setText(entreprise.getEmail());
                 tel.setText(entreprise.getTel());
+                servi.setText(String.valueOf(entreprise.getServi()));
+                dernier.setText(String.valueOf(entreprise.getDernier()));
                 code_postal.setText(String.valueOf(entreprise.getCodePostal()));
                 geHoraires();
 
@@ -116,11 +120,15 @@ public class DetailsBureauxFragment extends Fragment {
                 public void onClick(View v) {
                     if (sessionHandler.isLoggedIn()) {
                         User user = sessionHandler.getUserDetails();
-                        reservationDialog = new ReservationDialog(getContext(), user , entreprise);
+                        reservationDialog = new ReservationDialog(getContext(), user, entreprise);
                         reservationDialog.show();
 
 
-                    }else customLoginDialog.show();
+                    } else {
+
+                        customLoginDialog = new CustomLoginDialog(getContext(),entreprise);
+                        customLoginDialog.show();
+                    }
 
                 }
             });

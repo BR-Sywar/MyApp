@@ -38,6 +38,12 @@ public class Entreprise implements Parcelable {
     @SerializedName("lng")
     @Expose
     private double lng;
+    @SerializedName("servi")
+    @Expose
+    private Integer servi;
+    @SerializedName("dernier")
+    @Expose
+    private Integer dernier;
 
     protected Entreprise(Parcel in) {
         if (in.readByte() == 0) {
@@ -58,6 +64,17 @@ public class Entreprise implements Parcelable {
         }
         lat = in.readDouble();
         lng = in.readDouble();
+        if (in.readByte() == 0) {
+            servi = null;
+        } else {
+            servi = in.readInt();
+        }
+        if (in.readByte() == 0) {
+            dernier = null;
+        } else {
+            dernier = in.readInt();
+        }
+
     }
 
     public static final Creator<Entreprise> CREATOR = new Creator<Entreprise>() {
@@ -150,6 +167,21 @@ public class Entreprise implements Parcelable {
     public void setLng(double lng) {
         this.lng = lng;
     }
+    public Integer getServi() {
+        return servi;
+    }
+
+    public void setServi(Integer servi) {
+        this.servi = servi;
+    }
+
+    public Integer getDernier() {
+        return dernier;
+    }
+
+    public void setDernier(Integer dernier) {
+        this.dernier = dernier;
+    }
 
     @Override
     public int describeContents() {
@@ -178,5 +210,17 @@ public class Entreprise implements Parcelable {
         }
         dest.writeDouble(lat);
         dest.writeDouble(lng);
+        if (servi == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(servi);
+        }
+        if (dernier == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(dernier);
+        }
     }
 }

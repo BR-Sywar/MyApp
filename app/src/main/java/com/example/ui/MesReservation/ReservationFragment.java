@@ -47,7 +47,7 @@ public class ReservationFragment extends Fragment {
         no_ticket = root.findViewById(R.id.no_tickets);
         progressBar = root.findViewById(R.id.progressBar);
         sessionHandler = SessionHandler.getInstance(getContext());
-        customLoginDialog = new CustomLoginDialog(getContext());
+        customLoginDialog = new CustomLoginDialog(getContext(),null);
         getUser();
         prepareRecycler();
         getReservations();

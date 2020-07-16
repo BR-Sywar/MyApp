@@ -79,7 +79,7 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
         holder.username.setText(ticket.getUtilisateur());
         holder.entreprise.setText(ticket.getEntreprise());
         holder.num.setText(ticket.getNum());
-        holder.date.setText(ticket.getDate().getDate());
+        holder.date.setText(ticket.getDate().getDate().subSequence(0,10));
         holder.heure.setText(ticket.getHeure());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

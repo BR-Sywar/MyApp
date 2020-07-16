@@ -91,7 +91,7 @@ public class ReservationDialog {
 
 
         final Date date = new Date();
-        SimpleDateFormat date_formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        SimpleDateFormat date_formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         SimpleDateFormat time_formatter = new SimpleDateFormat("hh:mm", Locale.getDefault());
 
         final String strDate = date_formatter.format(date);
@@ -112,7 +112,7 @@ public class ReservationDialog {
                         // TODO Auto-generated method stub
                         /*      Your code   to get date and time    */
                         selectedmonth = selectedmonth + 1;
-                        tv_date.setText("" + selectedday + "/" + selectedmonth + "/" + selectedyear);
+                        tv_date.setText( selectedyear + "-" + selectedmonth + "-" + selectedday  );
                         mcurrentDate.set(selectedyear, selectedmonth, selectedday);
                         mMonth = selectedmonth - 1;
                         mDay = selectedday;

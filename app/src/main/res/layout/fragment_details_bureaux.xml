@@ -85,6 +85,7 @@
                  />
             <TextView
                 android:drawableStart="@drawable/ic_baseline_local_mall_24"
+                android:textColor="@color/darkTextColor"
                 android:drawablePadding="5dp"
                 android:id="@+id/d_code_Postal"
                 android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
 
             <TextView
                 android:id="@+id/tv_horaires"
-                android:text="Horaires"
+                android:text="Horaires:"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:layout_width="wrap_content"

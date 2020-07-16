@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.MainActivity;
+import com.example.data.models.Entreprise;
 import com.example.myapp.R;
 import com.example.network.RetrofitInstance;
 import com.example.network.api.AuthApi;
@@ -38,6 +39,7 @@ public class Login extends AppCompatActivity {
     AlertDialog.Builder builder;
     SessionHandler sessionHandler ;
     ProgressBar mProgressBar ;
+    private Entreprise entreprise ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,7 @@ public class Login extends AppCompatActivity {
         login = findViewById(R.id.btn_login);
         mProgressBar = findViewById(R.id.login_progressBar);
         sessionHandler = SessionHandler.getInstance(getApplicationContext());
+        entreprise = getIntent().getParcelableExtra("entre") ;
         api = RetrofitInstance.getInstance().create(AuthApi.class);
         Registre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +93,12 @@ public class Login extends AppCompatActivity {
                               sessionHandler.loginUser(loginResponse.getData());
                                 Intent intent = new Intent(Login.this, MainActivity.class) ;
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NO_HISTORY) ;
+                                if (entreprise != null) {
+                                    Bundle   bundle = new Bundle() ;
+                                    bundle.putParcelable("entre",entreprise);
+                                    intent.putExtras(bundle);
+                                }
+
                                 startActivity(intent);
 
                             }
