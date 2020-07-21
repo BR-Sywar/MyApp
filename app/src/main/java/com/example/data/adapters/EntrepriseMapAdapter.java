@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
@@ -14,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.data.models.Category;
 import com.example.data.models.Entreprise;
 import com.example.myapp.R;
 import com.example.utils.OnRecyclerViewItemClickListener;
@@ -96,7 +94,7 @@ public class EntrepriseMapAdapter extends RecyclerView.Adapter<EntrepriseMapAdap
         });
 
     }
-
+//Recherche
     public Filter getFilter() {
         return new Filter() {
 

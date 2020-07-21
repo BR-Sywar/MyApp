@@ -94,6 +94,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
             entrepriseMapAdapter = new EntrepriseMapAdapter(this);
             recyclerView.setVisibility(View.VISIBLE);
             final RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
+            //liste eli men louta lezm tji kemla fel position
             final SnapHelper snapHelper = new PagerSnapHelper() ;
             recyclerView.setLayoutManager(mLayoutManager);
             //snapHelper.
@@ -112,9 +113,9 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
                         entrepriseMapAdapter.setEntrepriseList(list);
                         for (Entreprise entreprise:
                                 list) {
-                            LatLng HotelJulius = new LatLng(entreprise.getLat(), entreprise.getLng());
+                            LatLng latLng = new LatLng(entreprise.getLat(), entreprise.getLng());
 
-                            Marker marker =    mMap.addMarker(new MarkerOptions().position(HotelJulius).title(entreprise.getNom())
+                            Marker marker =    mMap.addMarker(new MarkerOptions().position(latLng).title(entreprise.getNom())
                                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker)));
                             marker.setTag(entreprise);
                         }
@@ -153,29 +154,11 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
-              /*  String location=searchView.getQuery().toString();
-                List<Address>addressList = null ;
 
-                if (location!= null || !location.equals("")){
-                    Geocoder geocoder= new Geocoder(Maps.this );
-                    try {
-                        addressList= geocoder.getFromLocationName(location,1);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    Address address= addressList.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLatitude());
-
-
-
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
-                }*/
 
                     return false;
                 }
-
+//les entreprises sur map
                 @Override
                 public boolean onQueryTextChange(String newText) {
                     entrepriseMapAdapter.getFilter().filter(newText);
@@ -193,7 +176,7 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
     }
 
 
-
+//localisation
     private void getDeviceLocation(){
         Log.d(TAG, "getDeviceLocation: getting the devices current location");
 
@@ -305,9 +288,9 @@ public class Maps extends AppCompatActivity implements OnMapReadyCallback {
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
           if (entreprise!=null)
-        { LatLng HotelJulius = new LatLng(entreprise.getLat(), entreprise.getLng());
+        { LatLng latLng = new LatLng(entreprise.getLat(), entreprise.getLng());
 
-    Marker marker =    mMap.addMarker(new MarkerOptions().position(HotelJulius).title(entreprise.getNom())
+    Marker marker =    mMap.addMarker(new MarkerOptions().position(latLng).title(entreprise.getNom())
             .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker)));
     marker.setTag(entreprise);
         }

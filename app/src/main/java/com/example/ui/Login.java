@@ -111,41 +111,7 @@ public class Login extends AppCompatActivity {
                         }
                     });
 
-                    /*
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST,  Urls.URL_LOGIN,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    try {
-                                        JSONArray jsonArray = new JSONArray(response);
-                                        JSONObject jsonObject = jsonArray.getJSONObject(0);
-                                        String code = ((JSONObject) jsonObject).getString("code");
-                                        if (code.equals("login_failed")) {
-                                            builder.setTitle("login error ...");
-                                            displayAlert(jsonObject.getString("message"));
-                                        }
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    }
 
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(Login.this, "error", Toast.LENGTH_LONG).show();
-                            error.printStackTrace();
-                        }
-                    }) {
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("email", Email);
-                            params.put("password", Password);
-                            return params;
-                        }
-                    };
-                    MySingleton.getInstance(Login.this).addToRequestque(stringRequest);
-                    */
 
         }
     }

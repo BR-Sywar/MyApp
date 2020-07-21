@@ -24,7 +24,7 @@ public class SessionHandler {
     private static final String KEY_EMPTY = "";
 
     private SessionHandler(Context mContext) {
-
+//cache
         mPreferences = mContext.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         this.mEditor = mPreferences.edit();
     }

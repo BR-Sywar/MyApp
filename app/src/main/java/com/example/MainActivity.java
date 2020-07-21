@@ -3,9 +3,6 @@ package com.example;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.myapp.R;
-import com.google.android.material.navigation.NavigationView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +11,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import com.example.myapp.R;
+import com.google.android.material.navigation.NavigationView;
 
 
 
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         navigationView = findViewById(R.id.nav_view);
         setupNavigation();
+        //paramétre intent
         Bundle bundle = getIntent().getExtras() ;
         if (bundle != null) {
             navController.navigate(R.id.nav_details_bureaux,bundle);
